@@ -495,7 +495,7 @@ section h1 {
   margin-bottom: calc(5vw + 80px);
 }
 .core-value ul {
-  display: flex;
+  display: flex;  
   justify-content: space-between;
 }
 .core-value ul p {
@@ -504,6 +504,7 @@ section h1 {
 .core-value ul li {
   list-style: none;
   margin-right: 2.5em;
+  width: 350px;
 }
 .core-value ul li h3 {
   text-align: center;
