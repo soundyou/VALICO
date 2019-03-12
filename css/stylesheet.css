@@ -312,7 +312,7 @@ aside {
   background-color: black;
   color: white;
   padding: 3em;
-  transform: translateX(0);
+  transform: translateX(-100%);
 }
 
 .aside-active {
