@@ -5,13 +5,13 @@ var background = document.querySelector(".background");
 function gradientTransitionBC () {
   background.classList.add("background-transition");
   //redirect to blockchain
-  window.location.href = '/blockchain'
+  window.location.href = '/blockchain.html'
 }
 
 function gradientTransitionAD () {
   background.classList.add("background-transition-AD");
   //redirect to artdomain
-  window.location.href = '/artdomain'
+  window.location.href = '/artdomain.html'
 }
 
 bcBackground.addEventListener("click", gradientTransitionBC);
