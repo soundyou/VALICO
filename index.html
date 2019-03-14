@@ -43,7 +43,10 @@
       type="text/javascript"
     ></script>
   </head>
-  <body class="home">
+  <body class="home animsition">
+    <div class="burgerIcon" id="burgerButton">
+      <span></span>
+    </div>
     <div class="background"></div>
     <!-- nav start -->
     <!-- When click this over open up the hidden nav-->
@@ -53,12 +56,6 @@
           <a href="index.html" class="logo">
             <img src="assets/valico-logo_horizontal-white.svg" />
           </a>
-          <a href="" class="menu"></a>
-        </div>
-        <div class="side-nav">
-          <span class="burger burger-1"></span>
-          <span class="burger burger-2"></span>
-          <span class="burger burger-3"></span>
         </div>
       </nav>
       <!-- nav end -->
@@ -75,26 +72,38 @@
       </div>
     </div>
 
+    <div class="slideCloser" id="slideCloser"></div>
+
     <!-- when the bugger menu clicked aside will slide to the left-->
-    <aside class="playfair">
-      <div class="aside-menu-white">
-        <span class="burger burger-1"></span>
-        <span class="burger burger-2"></span>
-        <span class="burger burger-3"></span>
-      </div>
+    <aside class="playfair" id="aside">
       <ul class="aside-nav">
-        <li><a>About</a></li>
-        <li class="pattern-parent">
-          <span class="pattern-white"></span><a>What we do</a>
-        </li>
-        <li><a>Team</a></li>
         <li>
-          <a>Contact</a>
+          <a
+            href="about.html"
+            class="animsition-link"
+            >About</a
+          >
+        </li>
+        <li class="pattern-parent">
+          <span class="pattern-white"></span
+          ><a href="whatwedo.html" class="animsition-link">What we do</a>
+        </li>
+        <li><a href="team.html" class="animsition-link">Team</a></li>
+        <li>
+          <a href="contact.html" class="animsition-link">Contact</a>
           <div class="aside-footer">
-            <a style="font-size: 2em; margin-right: 14px;"
+            <a
+              style="font-size: 2em; margin-right: 14px;"
+              href="https://medium.com/@valico.ad"
+              class="animsition-link"
               ><i class="fab fa-medium"></i
             ></a>
-            <a style="font-size: 2em;"><i class="fab fa-linkedin"></i></a>
+            <a
+              style="font-size: 2em;"
+              class="animsition-link"
+              href="https://www.linkedin.com/company/14534218"
+              ><i class="fab fa-linkedin"></i
+            ></a>
             <p>Valico Co., Ltd. © 2019</p>
             <p>대한민국 서울시 강남구 테헤란로 7 11</p>
           </div>
@@ -104,11 +113,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <script src="bg-transition.js" type="text/javascript"></script>
-    <!-- <script src="animsition.min.js" charset="utf-8"></script>
+    <script src="burger.js" type="text/javascript"></script>
+    <script src="animsition.min.js" charset="utf-8"></script>
     <script>
       $(document).ready(function() {
         $('.animsition').animsition();
       });
-      </script> -->
+    </script>
   </body>
 </html>

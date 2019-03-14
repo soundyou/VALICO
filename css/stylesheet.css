@@ -176,6 +176,7 @@ h6 {
   background-size: 20%;
   position: absolute;
   top: -50px;
+  z-index: -11111;
 }
 .pattern-black {
   z-index: -1111;
@@ -213,7 +214,7 @@ h6 {
   left: 0;
   bottom: 0;
   right: 0;
-  transition: right 1s ease-in-out;
+  transition: right 0.8s ease-in-out;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ffffff+50,ffffff+100 */
   background: #000000; /* Old browsers */
   background: -moz-linear-gradient(
@@ -264,13 +265,118 @@ h6 {
   height: 37px;
 }
 
-.side-nav .burger {
+/* .side-nav .burger {
   display: block;
   width: 40px;
   height: 2px;
   background-color: black;
   margin-bottom: 10px;
+} */
+
+:root {
+  --burger_background_color: transparent;
+  --burger_color: black;
 }
+
+.burgerIcon {
+  min-width: 60px;
+  min-height: 60px;
+  display: block;
+  background-color: var(--burger_background_color);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  transition: transform 0.5s;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.burgerIcon span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 2px;
+  border-radius: 10%;
+  width: 30px;
+  background-color: var(--burger_color);
+  transition: background-color 0.5s;
+}
+
+.burgerIcon span::before {
+  width: 30px;
+  height: 2px;
+  border-radius: 10%;
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--burger_color);
+  transform: translateY(-10px);
+  transition: transform 0.5s;
+  transform-origin: 50% 50%;
+}
+
+.burgerIcon span::after {
+  width: 30px;
+  height: 2px;
+  border-radius: 10%;
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--burger_color);
+  transform: translateY(10px);
+  transition: transform 0.5s;
+  transform-origin: 50% 50%;
+}
+
+.burgerIcon:hover span::before {
+  transform: translateY(-13px);
+}
+
+.burgerIcon:hover span::after {
+  transform: translateY(13px);
+}
+
+.burgerIcon.open span {
+  background: transparent;
+}
+
+.burgerIcon.open span::before {
+  transform: rotate(45deg);
+  background: white;
+}
+
+.burgerIcon.open span::after {
+  transform: rotate(-45deg);
+  background: white;
+}
+
+.burgerIcon.open {
+  transform: rotate(180deg);
+  color: white !important;
+}
+
+/* display none when slide menu is closed */
+.slideCloser {
+  content: "";
+  position: fixed;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  top: 0px;
+  right: 10px;
+  z-index: 999;
+  display: none;
+  background-color: transparent;
+}
+
+.slideCloser.open {
+  display: block;
+}
+
+
+
 
 .home-container {
   display: flex;
@@ -320,17 +426,18 @@ aside {
   background-color: black;
   color: white;
   padding: 3em;
-  transform: translateX(-100%);
-}
-
-.aside-active {
-  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(200%);
 }
 
 aside ul li {
   font-size: calc(5vw + 30px);
   font-weight: 900;
   list-style: none;
+}
+aside ul li a{
+  color: white;
+  text-decoration: none;
 }
 
 aside ul li:first-child {
@@ -385,6 +492,10 @@ aside ul li:last-child {
 .aside-footer p {
   margin: 0;
   font-size: 15px;
+}
+
+#aside.open {
+  transform: translateX(0);
 }
 
 /* BLOCKCHAIN */
@@ -788,12 +899,8 @@ section h1 {
     height: 50vh;
     width: 100vw;
   }
-  .side-nav .burger {
-    display: block;
-    width: 40px;
-    height: 2px;
+  #burger:before, #burger:after, #burger i {
     background-color: white;
-    margin-bottom: 10px;
   }
   .artdomain .side-nav .burger {
     display: block;
@@ -814,14 +921,6 @@ section h1 {
   }
   .indicator{
     display: none;
-  }
-  .side-nav .burger {
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: black;
-    margin-top: 8px;
-    margin-bottom: 8px;
   }
   .logo img {
     width: 90px !important;
