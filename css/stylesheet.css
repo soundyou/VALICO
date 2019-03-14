@@ -236,11 +236,14 @@ h6 {
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
-.background-transition {
+.background-transition-BC {
   right: -1200%;
 }
 .background-transition-AD {
   right: 1200%;
+}
+.fade-out{
+  visibility: 0;
 }
 .top-nav {
   position: fixed;
@@ -286,6 +289,7 @@ h6 {
   font-size: calc(8vw + 50px);
   position: relative;
   cursor: pointer;
+  display: block;
 }
 
 .BC h1 span,
