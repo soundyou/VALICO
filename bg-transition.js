@@ -5,13 +5,13 @@ var background = document.querySelector(".background");
 function gradientTransitionBC () {
   background.classList.add("background-transition");
   //redirect to blockchain
-  window.location.href = 'http://www.colorzilla.com'
+  window.location.href = '/blockchain'
 }
 
 function gradientTransitionAD () {
   background.classList.add("background-transition-AD");
   //redirect to artdomain
-  window.location.href = 'http://www.colorzilla.com'
+  window.location.href = '/artdomain'
 }
 
 bcBackground.addEventListener("click", gradientTransitionBC);
