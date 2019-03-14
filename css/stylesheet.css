@@ -153,6 +153,8 @@ h6 {
   font-size: 20px;
 }
 
+/*HOVER EFFECT*/
+
 /*PATTERN*/
 .pattern-parent {
   position: relative;
@@ -290,7 +292,9 @@ h6 {
   cursor: pointer;
   z-index: 99999;
 }
-
+.burgerIconWhite span, .burgerIconWhite span::before, .burgerIconWhite span::after{
+  background-color: white !important;
+}
 .burgerIcon span {
   display: block;
   position: absolute;
@@ -340,6 +344,10 @@ h6 {
 
 .burgerIcon.open span {
   background: transparent;
+}
+
+.burgerIconWhite.open span {
+  background: transparent !important;
 }
 
 .burgerIcon.open span::before {
@@ -415,7 +423,7 @@ h6 {
 }
 
 aside {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -434,6 +442,10 @@ aside ul li {
   font-size: calc(5vw + 30px);
   font-weight: 900;
   list-style: none;
+  transition: padding 0.2s ease-in-out;
+}
+aside ul li:hover{
+  padding-left: 20px;
 }
 aside ul li a{
   color: white;
