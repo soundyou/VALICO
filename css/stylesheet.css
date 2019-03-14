@@ -213,7 +213,7 @@ h6 {
   left: 0;
   bottom: 0;
   right: 0;
-  transition: right 0.8s ease-in-out;
+  transition: right 1s ease-in-out;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ffffff+50,ffffff+100 */
   background: #000000; /* Old browsers */
   background: -moz-linear-gradient(
@@ -242,8 +242,12 @@ h6 {
 .background-transition-AD {
   right: 1200%;
 }
+.fade-out-container{
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
 .fade-out{
-  visibility: 0;
+  opacity: 0;
 }
 .top-nav {
   position: fixed;

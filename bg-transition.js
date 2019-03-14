@@ -1,23 +1,28 @@
 const bcBackground = document.getElementById("home-title-BC");
 const adBackground = document.querySelector(".home-title-AD");
 const background = document.querySelector(".background");
+const fadeOutContainer = document.querySelector(".fade-out-container");
 
 function gradientTransitionBC () {
     background.classList.add("background-transition-BC");
     //redirect to blockchain
     setTimeout(() => {
-      window.location.href = 'blockchain.html'
+      fadeOutContainer.classList.add("fade-out");
     }, 800);
-
-    background.classList.add("fade-out");
-
-
+    setTimeout(() => {
+      window.location.href = 'blockchain.html'
+    }, 1200);
 }
 
 function gradientTransitionAD () {
   background.classList.add("background-transition-AD");
-  //redirect to artdomain
-  window.location.href = 'artdomain.html'
+  //redirect to blockchain
+  setTimeout(() => {
+    fadeOutContainer.classList.add("fade-out");
+  }, 800);
+  setTimeout(() => {
+    window.location.href = 'artdomain.html'
+  }, 1200);
 }
 
 bcBackground.addEventListener("click", gradientTransitionBC);
