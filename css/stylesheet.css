@@ -116,6 +116,7 @@ a{
   margin-top: 8em;
   margin-bottom: 5em;
   position: relative;
+  z-index: 0;
 }
 .footer-link a {
   position: relative;
@@ -494,6 +495,7 @@ aside {
   padding: 3em;
   transition: transform 0.5s ease-in-out;
   transform: translateX(200%);
+  z-index: 9999;
 }
 
 aside ul li {
