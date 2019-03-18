@@ -62,6 +62,9 @@ h6 {
   font-size: calc(0.8vw + 20px);
   font-weight: 900;
 }
+a{
+  text-decoration: none;
+}
 
 /*MOBILE*/
 .m-hide {
@@ -115,13 +118,38 @@ h6 {
   position: relative;
 }
 .footer-link a {
-  text-decoration: underline;
   position: relative;
   cursor: pointer;
+}
+.footer-link a img {
+  transition: transform 0.2s ease-in-out;
+}
+.footer-link:hover a img {
+  transform: translateX(10px);
 }
 .footer-link-wide {
   display: flex;
   justify-content: space-between;
+}
+.footer-link a.effect-underline:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+.footer-link a.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 .arrow {
   width: calc(0.8vw + 15px);
@@ -245,11 +273,11 @@ h6 {
 .background-transition-AD {
   right: 1200%;
 }
-.fade-out-container{
+.fade-out-container {
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
 }
-.fade-out{
+.fade-out {
   opacity: 0;
 }
 .top-nav {
@@ -292,7 +320,9 @@ h6 {
   cursor: pointer;
   z-index: 99999;
 }
-.burgerIconWhite span, .burgerIconWhite span::before, .burgerIconWhite span::after{
+.burgerIconWhite span,
+.burgerIconWhite span::before,
+.burgerIconWhite span::after {
   background-color: white !important;
 }
 .burgerIcon span {
@@ -312,7 +342,7 @@ h6 {
   width: 30px;
   height: 2px;
   border-radius: 10%;
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   background-color: var(--burger_color);
@@ -325,7 +355,7 @@ h6 {
   width: 30px;
   height: 2px;
   border-radius: 10%;
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   background-color: var(--burger_color);
@@ -367,7 +397,7 @@ h6 {
 
 /* display none when slide menu is closed */
 .slideCloser {
-  content: "";
+  content: '';
   position: fixed;
   cursor: pointer;
   width: 60px;
@@ -382,9 +412,6 @@ h6 {
 .slideCloser.open {
   display: block;
 }
-
-
-
 
 .home-container {
   display: flex;
@@ -444,10 +471,10 @@ aside ul li {
   list-style: none;
   transition: padding 0.2s ease-in-out;
 }
-aside ul li:hover{
+aside ul li:hover {
   padding-left: 20px;
 }
-aside ul li a{
+aside ul li a {
   color: white;
   text-decoration: none;
 }
@@ -576,13 +603,13 @@ section h1 {
   margin: 0 auto 2.5em;
   max-width: 400px;
 }
-.cloud-diagram-mobile{
+.cloud-diagram-mobile {
   margin-bottom: 30px;
 }
 .triangle-diagram {
   margin-top: -30px;
 }
-.applicataion-example{
+.applicataion-example {
   margin-bottom: 80px;
 }
 
@@ -626,7 +653,7 @@ section h1 {
   margin-bottom: calc(5vw + 80px);
 }
 .core-value ul {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
 }
 .core-value ul p {
@@ -710,7 +737,7 @@ section h1 {
 .contact-container .contact-box {
   width: 50%;
 }
-.contact-container .contact-box li:first-child{
+.contact-container .contact-box li:first-child {
   margin-bottom: 20px;
 }
 .contact-container .contact-box-text {
@@ -815,7 +842,7 @@ section h1 {
   .contact-container {
     display: block;
   }
-  .contact-box{
+  .contact-box {
     margin-bottom: 5em;
   }
   .contact-form {
@@ -853,12 +880,13 @@ section h1 {
   .applicataion-example {
     display: block;
   }
-  .applicataion-example .h5{
-    text-align:center;
+  .applicataion-example .h5 {
+    text-align: center;
     margin-bottom: 20px;
   }
-  .applicataion-example ul{
-    width: 80%; margin: 0 auto;
+  .applicataion-example ul {
+    width: 80%;
+    margin: 0 auto;
     margin-bottom: 30px;
   }
   .triangle-diagram {
@@ -911,7 +939,9 @@ section h1 {
     height: 50vh;
     width: 100vw;
   }
-  #burger:before, #burger:after, #burger i {
+  #burger:before,
+  #burger:after,
+  #burger i {
     background-color: white;
   }
   .artdomain .side-nav .burger {
@@ -931,7 +961,7 @@ section h1 {
     width: 85%;
     margin: 0 auto 1.2em;
   }
-  .indicator{
+  .indicator {
     display: none;
   }
   .logo img {
