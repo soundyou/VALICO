@@ -570,6 +570,13 @@ aside ul li:last-child {
   transform: translateX(0);
 }
 
+.langauge a{
+  transition: color 0.2s ease;
+}
+.langauge a:hover{
+  color: #282625;
+}
+
 /* BLOCKCHAIN */
 .section-header {
   text-align: center;

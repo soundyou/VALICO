@@ -11,6 +11,12 @@
     <meta name="author" content="name" />
     <meta name="description" content="description here" />
     <meta name="keywords" content="keywords,here" />
+    <!-- animsition.css -->
+    <link rel="stylesheet" href="css/animsition.min.css" />
+    <meta
+      http-equiv="Page-Enter"
+      content="RevealTrans(Duration=4,Transition=4)"
+    />
     <link
       rel="shortcut icon"
       href="favicon.ico"
@@ -21,29 +27,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
-  </head>
-  <body class="background-black contact" style="color: white;">
-    <!-- nav start -->
-    <nav class="top-nav">
-      <div class="nav-logo">
-        <a href="index.html" class="logo">
-          <img src="assets/valico-logo_horizontal-white.svg" />
-        </a>
-        <a href="/" class="menu"></a>
-      </div>
-      <div class="side-nav">
-        <span class="burger burger-1"></span>
-        <span class="burger burger-2"></span>
-        <span class="burger burger-3"></span>
-      </div>
-    </nav>
-    <!-- nav end -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"
+      type="text/javascript"
+    ></script>
+  <body class="background-black contact animsition" style="color: white;">
+    <!-- Header -->
+    <div id="header"></div>
 
     <!-- indicator -->
     <div class="indicator indicator-fix  playfair">
       <p>Contact.</p>
     </div>
-    <!-- indicator -->
 
     <!-- body -->
     <div class="container">
@@ -54,12 +59,12 @@
         <div class="contact-box">
           <li class="h5">About Blockchain
               <div class="contact-box-text">
-                  <span class="line-short"></span><a href="emailto: soundyou@valico.io">soundyou@valico.io</a>
+                  <span class="line-short"></span><a href="mailto: soundyou@valico.io">soundyou@valico.io</a>
               </div>
           </li>
           <li class="h5">About Art Domain
             <div class="contact-box-text">
-                <span class="line-short"></span><a href="emailto: jiamin@valico.io">jiamin@valico.io</a>
+                <span class="line-short"></span><a href="mailto: jiamin@valico.io">jiamin@valico.io</a>
             </div>
           </li>
         </div>
@@ -74,19 +79,20 @@
       </div>
 
       <div class="footer-link-wide">
-          <a style="color: white;" href="team.html" class="playfair h6 footer-link"><img class="arrow arrow-left" src="assets/arrow-left-white.svg" alt="arrow-left-white.svg"/>Team</a>
-          <a style="color: white;" href="About.html" class="playfair h6 footer-link">About <img class="arrow" src="assets/arrow-right-white.svg" alt="arrow-right-white.svg"/></a>
+          <a style="color: white;" href="team-kr.html" class="playfair h6 footer-link effect-underline"><img class="arrow arrow-left" src="assets/arrow-left-white.svg" alt="arrow-left-white.svg"/>Team</a>
+          <a style="color: white;" href="About-kr.html" class="playfair h6 footer-link effect-underline">About<img class="arrow" src="assets/arrow-right-white.svg" alt="arrow-right-white.svg"/></a>
         </div>
     </div>
     <!-- container end -->
 
-    <script
-      src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"
-      type="text/javascript"
-    ></script>
-  </bod>
-</html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="animsition.min.js" charset="utf-8"></script>
+    <script>
+      $("#header").load("header-kr.html");
+      $(document).ready(function() {
+        $('.animsition').animsition();
+      });
+    </script>
+    </body>
+  </html>
