@@ -65,6 +65,17 @@ h6 {
 a{
   text-decoration: none;
 }
+/* .li-title{
+  list-style: none;
+  position: relative;
+}
+.li-title::before{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  margin-left: -10px;
+} */
 
 /*MOBILE*/
 .m-hide {
@@ -754,10 +765,30 @@ section h1 {
   padding: 1em;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: url('../assets/team-1.jpg');
+  background-image: url('../assets/hazel.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.team-member:nth-child(1) {
-  background-image: url('../assets/team-1.jpg');
+.team-member:nth-child(2) {
+  background-image: url('../assets/hazel.jpg');
+}
+.team-member:nth-child(2) {
+  background-image: url('../assets/changsong.jpg');
+}
+.team-member:nth-child(3) {
+  background-image: url('../assets/jia.jpg');
+}
+.team-member:nth-child(4) {
+  background-image: url('../assets/jongha.jpg');
+}
+.team-member:nth-child(5) {
+  background-image: url('../assets/brian.jpg');
+}
+.team-member:nth-child(6) {
+  background-image: url('../assets/jh.jpg');
+}
+.team-member:nth-child(7) {
+  background-image: url('../assets/youngrock.jpg');
 }
 
 .team-member h5 {
@@ -979,10 +1010,65 @@ section h1 {
     height: 50vh;
     width: 100vw;
   }
-  #burger:before,
-  #burger:after,
-  #burger i {
-    background-color: white;
+  :root {
+    --burger_background_color: transparent;
+    --burger_color: white;
+  }
+  
+  .burgerIcon {
+    min-width: 60px;
+    min-height: 60px;
+    display: block;
+    background-color: var(--burger_background_color);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    z-index: 99999;
+  }
+  .burgerIconWhite span,
+  .burgerIconWhite span::before,
+  .burgerIconWhite span::after {
+    background-color: white !important;
+  }
+  .burgerIcon span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 2px;
+    border-radius: 10%;
+    width: 30px;
+    background-color: var(--burger_color);
+    transition: background-color 0.5s;
+  }
+  
+  .burgerIcon span::before {
+    width: 30px;
+    height: 2px;
+    border-radius: 10%;
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: var(--burger_color);
+    transform: translateY(-10px);
+    transition: transform 0.5s;
+    transform-origin: 50% 50%;
+  }
+  
+  .burgerIcon span::after {
+    width: 30px;
+    height: 2px;
+    border-radius: 10%;
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: var(--burger_color);
+    transform: translateY(10px);
+    transition: transform 0.5s;
+    transform-origin: 50% 50%;
   }
   .artdomain .side-nav .burger {
     display: block;
