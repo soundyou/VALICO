@@ -10,7 +10,8 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -134,14 +135,22 @@ a{
   cursor: pointer;
 }
 .footer-link a img {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 .footer-link:hover a img {
-  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 .footer-link-wide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /* .footer-link a.effect-underline:after {
   content: '';
@@ -174,7 +183,9 @@ a{
   margin-top: 10px;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
   -webkit-transform: scale(0, 1);
   transform: scale(0, 1);
 }
@@ -188,13 +199,18 @@ a{
   position: absolute;
   right: -40px;
   top: 10px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 .footer-link-wide a:hover .arrow{
-  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 .footer-link-wide a:hover .arrow-left{
-  transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 .arrow-left {
   left: -40px;
@@ -209,7 +225,8 @@ a{
 }
 .indicator {
   position: fixed;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   left: -1.2em;
   bottom: 3em;
   font-weight: 900;
@@ -265,7 +282,8 @@ a{
 }
 .pattern-right {
   position: absolute;
-  transform: translate(200px, 50px);
+  -webkit-transform: translate(200px, 50px);
+          transform: translate(200px, 50px);
 }
 .pattern-sqaure {
   width: 200px;
@@ -287,21 +305,17 @@ a{
   left: 0;
   bottom: 0;
   right: 0;
+  -webkit-transition: right 0.8s ease-in-out;
   transition: right 0.8s ease-in-out;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ffffff+50,ffffff+100 */
-  background: #000000; /* Old browsers */
-  background: -moz-linear-gradient(
-    left,
-    #000000 0%,
-    #ffffff 50%,
-    #ffffff 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    left,
-    #000000 0%,
-    #ffffff 50%,
-    #ffffff 100%
-  ); /* Chrome10-25,Safari5.1-6 */
+  background: #000000; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top, right top,
+    from(#000000),
+    color-stop(50%, #ffffff),
+    to(#ffffff)
+  );
   background: linear-gradient(
     to right,
     #000000 0%,
@@ -318,6 +332,7 @@ a{
 }
 .fade-out-container {
   opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
 .fade-out {
@@ -327,10 +342,15 @@ a{
   position: fixed;
   padding: 1em 2em 1em;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100vw;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .logo img {
@@ -359,7 +379,10 @@ a{
   position: fixed;
   top: 0px;
   right: 0px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   cursor: pointer;
   z-index: 99999;
 }
@@ -373,11 +396,13 @@ a{
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   height: 2px;
   border-radius: 10%;
   width: 30px;
   background-color: var(--burger_color);
+  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
 
@@ -389,9 +414,14 @@ a{
   display: block;
   position: absolute;
   background-color: var(--burger_color);
-  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  transform-origin: 50% 50%;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 .burgerIcon span::after {
@@ -402,17 +432,24 @@ a{
   display: block;
   position: absolute;
   background-color: var(--burger_color);
-  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  transform-origin: 50% 50%;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 .burgerIcon:hover span::before {
-  transform: translateY(-13px);
+  -webkit-transform: translateY(-13px);
+          transform: translateY(-13px);
 }
 
 .burgerIcon:hover span::after {
-  transform: translateY(13px);
+  -webkit-transform: translateY(13px);
+          transform: translateY(13px);
 }
 
 .burgerIcon.open span {
@@ -424,17 +461,20 @@ a{
 }
 
 .burgerIcon.open span::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   background: white;
 }
 
 .burgerIcon.open span::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   background: white;
 }
 
 .burgerIcon.open {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   color: white !important;
 }
 
@@ -457,6 +497,8 @@ a{
 }
 
 .home-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -465,9 +507,14 @@ a{
   height: 100vh;
   width: 50vw;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-content: center;
-  align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .BC h1,
@@ -494,9 +541,16 @@ a{
 
 aside {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   top: 0;
   left: 0;
   right: 0;
@@ -504,8 +558,12 @@ aside {
   background-color: black;
   color: white;
   padding: 3em;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
-  transform: translateX(200%);
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
   z-index: 9999;
 }
 
@@ -513,6 +571,7 @@ aside ul li {
   font-size: calc(5vw + 30px);
   font-weight: 900;
   list-style: none;
+  -webkit-transition: padding 0.2s ease-in-out;
   transition: padding 0.2s ease-in-out;
 }
 aside ul li:hover {
@@ -578,10 +637,12 @@ aside ul li:last-child {
 }
 
 #aside.open {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .langauge a{
+  -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 .langauge a:hover{
@@ -591,10 +652,18 @@ aside ul li:last-child {
 /* BLOCKCHAIN */
 .section-header {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .section-header p {
   width: 70%;
@@ -623,8 +692,11 @@ section h1 {
   font-style: underline;
 }
 .business-area-circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 3em;
 }
 .business-area-circles div {
@@ -633,10 +705,18 @@ section h1 {
   width: calc(5.5vw + 100px);
   height: calc(5.5vw + 100px);
   border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .business-area ul li {
   width: 75%;
@@ -666,6 +746,8 @@ section h1 {
 
 /* ART DOMAIN */
 .business-area-case {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: calc(8vw + 20px);
 }
@@ -680,9 +762,15 @@ section h1 {
   margin-right: 2em;
   background-color: black;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .frame-mid {
   margin-right: 0em;
@@ -704,8 +792,12 @@ section h1 {
   margin-bottom: calc(5vw + 80px);
 }
 .core-value ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .core-value ul p {
   line-height: 1.5;
@@ -727,6 +819,8 @@ section h1 {
   margin-top: calc(10vw + 40px);
 }
 .whatwedo .whatwedo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .whatwedo .whatwedo-box > li {
@@ -761,10 +855,17 @@ section h1 {
   max-width: 300px;
   list-style: none;
   height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 1em;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   background-image: url('../assets/hazel.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -803,6 +904,8 @@ section h1 {
   margin-top: calc(10vw + 40px);
 }
 .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .contact-container .contact-box {
@@ -813,9 +916,15 @@ section h1 {
 }
 .contact-container .contact-box-text {
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .line-short {
   width: 100px;
@@ -856,7 +965,29 @@ section h1 {
   background-color: transparent;
   border: 2px solid white;
   padding: 1em;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+}
+.contact-form input:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+}
+.contact-form input::-ms-input-placeholder,
+.contact-form textarea::-ms-input-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
 }
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
@@ -974,20 +1105,16 @@ section h1 {
 
 @media only screen and (max-width: 600px) {
   .background {
+    -webkit-transition: bottom 0.8s ease-in-out;
     transition: bottom 0.8s ease-in-out;
-    background: #000000; /* Old browsers */
-    background: -moz-linear-gradient(
-      top,
-      #000000 0%,
-      #ffffff 50%,
-      #ffffff 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      top,
-      #000000 0%,
-      #ffffff 50%,
-      #ffffff 100%
-    ); /* Chrome10-25,Safari5.1-6 */
+    background: #000000; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(#000000),
+      color-stop(50%, #ffffff),
+      to(#ffffff)
+    );
     background: linear-gradient(
       to bottom,
       #000000 0%,
@@ -1003,7 +1130,10 @@ section h1 {
     bottom: 900%;
   }
   .home-container {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .BC,
   .AD {
@@ -1023,7 +1153,10 @@ section h1 {
     position: fixed;
     top: 0px;
     right: 0px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
     cursor: pointer;
     z-index: 99999;
   }
@@ -1037,11 +1170,13 @@ section h1 {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
     height: 2px;
     border-radius: 10%;
     width: 30px;
     background-color: var(--burger_color);
+    -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
   
@@ -1053,9 +1188,14 @@ section h1 {
     display: block;
     position: absolute;
     background-color: var(--burger_color);
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
-    transform-origin: 50% 50%;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
   }
   
   .burgerIcon span::after {
@@ -1066,9 +1206,14 @@ section h1 {
     display: block;
     position: absolute;
     background-color: var(--burger_color);
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
-    transform-origin: 50% 50%;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
   }
   .artdomain .side-nav .burger {
     display: block;
