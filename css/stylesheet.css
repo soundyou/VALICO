@@ -1271,4 +1271,36 @@ section h1 {
   .core-value .pattern-white{
     display: none;
   }
+  .why-via-chain .pattern-white{
+    display: none;
+  }
+  .why-via-chain h5{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .business-area-circles div{
+    width: 100px; height: 100px;
+  }
+  .business-area-circles .pattern-sqaure{
+    width: 100px; height: 100px;
+  }
+  .blockchain ul li {
+    width: 100%;
+  }
+  .blockchain ul{
+    margin-left: 20px;
+  }
+  .section-header p{
+    width: 90%;
+  }
+  .applicataion-example ul{
+    width: 100%;
+  }
+  .diagram-container{
+    margin-left: 25px;
+  }
+  .applicataion-example .h5{
+    font-size: 19px;
+    text-align: left;
+  }
 }
