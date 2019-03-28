@@ -891,6 +891,9 @@ section h1 {
 .team-member:nth-child(7) {
   background-image: url('../assets/youngrock.jpg');
 }
+.team-member:nth-child(8) {
+  background-image: url('../assets/jj.jpg');
+}
 
 .team-member h5 {
   margin: 0;
@@ -1105,6 +1108,11 @@ section h1 {
 
 @media only screen and (max-width: 600px) {
   .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     -webkit-transition: bottom 0.8s ease-in-out;
     transition: bottom 0.8s ease-in-out;
     background: #000000; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
@@ -1123,11 +1131,11 @@ section h1 {
     ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
   }
-  .background-transition {
-    bottom: -900%;
+  .background-transition-BC {
+    bottom: -900% !important;
   }
   .background-transition-AD {
-    bottom: 900%;
+    bottom: 900% !important;
   }
   .home-container {
     -webkit-box-orient: vertical;
@@ -1302,5 +1310,8 @@ section h1 {
   .applicataion-example .h5{
     font-size: 19px;
     text-align: left;
+  }
+  .pattern-none{
+    display: none;
   }
 }
